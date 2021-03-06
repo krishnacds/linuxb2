@@ -1,4 +1,5 @@
 #include <stdio.h> 
+#include <stdlib.h>
 
 int main () 
 
@@ -10,10 +11,11 @@ int main ()
 
   int ncol=2;    
 
+  int i=0,j=0;
   arc = (int *)malloc(sizeof(int)*nrow); 
    
 
-  for (int i = 0; i < nrow; i++) { 
+  for ( i = 0; i < nrow; i++) { 
 
       arc[i]=(int *)malloc(sizeof(int)*ncol); 
 
@@ -22,9 +24,9 @@ int main ()
 
   // fill some data in 2 D array    
 
-for (int i = 0; i < nrow; i++) { 
+for ( i = 0; i < nrow; i++) { 
 
-     for (int j = 0; j < ncol ; j++) { 
+     for ( j = 0; j < ncol ; j++) { 
 
        arc[i][j]=(i+j+2); 
 
@@ -34,9 +36,9 @@ for (int i = 0; i < nrow; i++) {
 
 printf("\n-----Combined ------\n"); 
 
-for (int i = 0; i < nrow; i++) { 
+for ( i = 0; i < nrow; i++) { 
 
-     for (int j = 0; j < ncol ; j++) { 
+     for ( j = 0; j < ncol ; j++) { 
 
         printf("%d \t ",arc[i][j]); 
 
